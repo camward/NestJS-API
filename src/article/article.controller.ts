@@ -79,6 +79,7 @@ export class ArticleController {
     @Param('slug') slug: string,
     @Body('article') updateArticleDto: CreateArticleDto,
   ) {
+    console.log('updateArticle', updateArticleDto, slug);
     const article = await this.articleService.updateArticle(
       slug,
       updateArticleDto,
